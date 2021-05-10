@@ -48,6 +48,23 @@ def num_counter3(arr):
           f'оно встерчается {amount_elem} раз(а)')
 
 
+# четвертый вариант без встроенных функций
+def num_counter4(arr):
+    num = arr[0]
+    cnt = 1
+    for i in range(len(arr) - 1):
+        n = 1
+        for j in range(i + 1, len(arr)):
+            if arr[i] == arr[j]:
+                n += 1
+        if n > cnt:
+            cnt = n
+            num = arr[i]
+
+    print(f'Чаще всего встречается число {num},\n'
+          f'оно встречается {cnt} раз(а)')
+
+
 s = '-'
 lst = [randint(1, 10) for i in range(0, 20)]
 print(lst)
@@ -60,11 +77,14 @@ num_counter2(lst)
 print(s * 40)
 print('num_counter3:')
 num_counter3(lst)
+print(s * 40)
+print('num_counter4:')
+num_counter4(lst)
 
 
 # результат запуска программы
 """
-[4, 3, 3, 1, 3, 6, 3, 5, 4, 6, 7, 8, 5, 5, 3, 7, 6, 7, 2, 7]
+[8, 6, 7, 3, 9, 1, 3, 4, 1, 4, 8, 5, 3, 3, 3, 7, 7, 9, 2, 2]
 ----------------------------------------
 num_counter1:
 Чаще всего встречается число 3,
@@ -77,6 +97,8 @@ num_counter2:
 num_counter3:
 Чаще всего встречается число 3,
 оно встерчается 5 раз(а)
-
-Process finished with exit code 0
+----------------------------------------
+num_counter4:
+Чаще всего встречается число 3,
+оно встречается 5 раз(а)
 """
