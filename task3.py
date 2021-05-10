@@ -3,7 +3,7 @@
 В массиве случайных целых чисел поменять местами минимальный и максимальный элементы.
 """
 # python --version 3.9.0
-from random import  randint
+from random import randint
 
 
 def min_change_max(lst):
