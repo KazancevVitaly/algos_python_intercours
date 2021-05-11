@@ -16,9 +16,8 @@ def two_min(arr):
             min_el_1 = el
             min_el_2 = el
             j += 1
-        else:
-            if el < min_el_1:
-                min_el_1 = el
+        elif el < min_el_1:
+            min_el_1 = el
     arr.remove(min_el_1)
     """
     Находим первый минимальный элемент и удаляем его из списка,
