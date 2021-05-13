@@ -8,15 +8,10 @@ from random import randint
 
 
 def two_min(arr):
-    min_el_1 = 0
-    min_el_2 = 0
-    j = 1
+    min_el_1 = arr[0]
+    min_el_2 = arr[0]
     for el in arr:
-        if j == 1:
-            min_el_1 = el
-            min_el_2 = el
-            j += 1
-        elif el < min_el_1:
+        if el < min_el_1:
             min_el_1 = el
     arr.remove(min_el_1)
     """
